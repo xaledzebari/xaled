@@ -1,0 +1,242 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/*                     */
+/* header and logobox */
+/*                   */
+header{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+}
+nav{
+    width: 75%;
+    height: 100px;
+    float: left;
+}
+nav ul{
+    display: flex;
+}
+nav a{
+    background-color:  rgb(53, 43, 43);
+    width: 34%; 
+    height: 100px;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    transition: 0.5s background-color;
+}
+nav a:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+.logobox{
+    width: 25%;
+    height: 100px;
+    background-color: rgb(107, 102, 102);
+    float: right;
+}
+.logobox h3{
+    float: left;
+    font-size: 20px;
+    color: whitesmoke;
+    margin-left: 10px;
+}
+.logobox img{
+    width: 100px;
+    height: 100px;
+    float: right;
+    border-radius: 50%;
+}
+/*                     */
+/*       aside        */
+/*                   */
+aside{
+    background-color: whitesmoke;
+    width: 30%;
+    height: 450px;
+    float: left;
+}
+.as_img{
+    width: 90%;
+    height: auto;
+    padding: 5px 0px 0px 5%;
+}
+.as_text{
+    height: 45px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid #eb5a49;
+}
+.as_logo{
+    text-align: center  ;
+    display: flex; 
+    justify-content: center;
+    margin-top: 15px;
+}
+.as_logo img{
+    width: 45px;    
+    border-bottom:2px solid #eb5a49; 
+    padding-bottom: 10px;
+    transition: 0.3s width;
+}
+.as_logo img:hover{
+    width: 55px;
+    border-bottom:2px solid black;
+}
+/*                     */
+/*       main         */
+/*                   */
+main{
+    width: 70%;
+    height: 450px;
+    float: right;
+    background-color: rgb(107, 102, 102);
+    position: relative;
+    animation: animi_color 3s infinite alternate-reverse;
+}
+@keyframes animi_color
+{   
+    to{
+        background-color:  rgb(53, 43, 43);
+    }
+}
+main article{
+    position: absolute;
+    width: 360px;
+    background-color: whitesmoke;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px;
+
+    direction: rtl;
+}
+article h4{
+    text-align: center;
+    margin: 10px 0px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eb5a49;
+}
+/*                     */
+/*       course       */
+/*                   */
+.course{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    clear: both;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+.course img{
+    width: 380px;
+    height: 200px;
+    padding-top: 20px;
+}
+.course img:hover{
+    opacity: 0.8;
+}
+/*                     */
+/*       media        */
+/*                   */
+@media only screen and (max-width:900px){
+    nav{
+        width: 70%;
+    }
+    .logobox{
+        width: 30%;
+    }
+    aside{
+        width: 35%;
+    }
+    main{
+        width: 65%;
+    }
+}
+@media only screen and (max-width:761px){
+    header{
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    nav{
+        width: 100%;
+    }
+    .logobox{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .logobox h3{
+        transform: translate(90px,130px);
+        width: 200%;
+    }
+    .logobox img{
+        width: 175px;
+        height: 157px;
+        transform: translate(-38px,1px);
+    }
+
+    aside{
+        width: 100%;
+    }
+    .as_img{
+        height: 65%;
+    }
+
+    main{
+        width: 100%;
+        height: 250px;
+    }
+    main article{
+        width: 320px;
+    }
+
+    .course{
+        background-color: rgb(107, 102, 102);
+        animation: animi_color 3s infinite alternate-reverse;
+    }
+    @keyframes animi_color
+    {
+        to{
+            background-color:  rgb(53, 43, 43);
+        }
+    }
+    .course img{
+        width: 340px;
+        padding-top: 5px;
+    }
+}
+@media only screen and (max-width:403px){
+    nav li{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    aside{
+        height: 360px;  
+    }
+    .as_img{
+        height: 55%;
+    }
+}
+@media only screen and (max-width:365px){
+    nav li{
+        font-size: 10px;
+    }
+    main article {
+        width: 80%;
+    }   
+    .course img {
+        width: 229px;
+        padding-top: 5px;
+        height: auto;
+    }
+}
